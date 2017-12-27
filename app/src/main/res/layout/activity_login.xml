@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    tools:context="com.example.android.letschat.LoginActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout1"
+        android:visibility="visible">
+
+
+    <TextView
+        android:id="@+id/verifytv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#13a796"
+        android:layout_centerHorizontal="true"
+        android:text="Verify your phone number" />
+    <TextView
+        android:id="@+id/verifytv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="LetsChat will send an SMS message to verify your phone number. Enter your country code and phone number :"
+        android:layout_below="@id/verifytv1"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"/>
+
+    <com.hbb20.CountryCodePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verifytv2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        app:ccp_textSize="15dp"
+        android:id="@+id/countryCodePicker">
+
+    </com.hbb20.CountryCodePicker>
+
+    <EditText
+        android:id="@+id/phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/countryCodePicker"
+        android:layout_alignBaseline="@id/countryCodePicker"
+        android:layout_toRightOf="@id/countryCodePicker"
+        android:hint="phone number"
+        android:inputType="number"
+        android:ems="10"
+        android:textColorHint="@android:color/darker_gray"
+        android:maxLines="1" />
+     <Button
+         android:id="@+id/verify_next"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="50dp"
+         android:text="Next"
+         android:backgroundTint="@android:color/holo_green_dark"
+         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Carrier SMS charge may apply"
+        android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout2"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/verifyNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#13a796"
+            android:layout_centerHorizontal="true"
+            android:text="Verify " />
+        <TextView
+            android:id="@+id/waitMesseage_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:text="Waiting to automatically detect an SMS sent to "
+            android:layout_below="@id/verifyNumber"/>
+
+
+        <EditText
+            android:id="@+id/enterCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verifyNumber"
+            android:layout_centerHorizontal="true"
+            android:ems="6"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="130dp"
+            android:maxLength="10"
+            android:maxLines="1"/>
+
+        <Button
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/enterCode"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="Resend SMS" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Enter 6-digit code"
+            android:layout_below="@+id/enterCode"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:id="@+id/verify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:text="VerifyCode"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
