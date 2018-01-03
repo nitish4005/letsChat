@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.letschat.CreateProfile">
+
+    <TextView
+        android:id="@+id/profile_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Profile Info"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/profile_info"
+        android:text="Please provide your name and an optional profile photo"
+        android:id="@+id/textView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/default_pic"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+    <ImageButton
+        android:id="@+id/create_profile_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/editTextName"
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/ic_photo_camera_black_36px"
+        android:layout_toEndOf="@+id/create_profile_next"
+        android:background="@drawable/button_shape" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profile_image"
+        android:layout_marginTop="40dp"
+        android:hint="Type your name here"
+        android:maxLength="36"
+        android:maxLines="1" />
+
+    <Button
+        android:id="@+id/create_profile_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:text="Next"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
