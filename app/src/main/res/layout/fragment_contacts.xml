@@ -4,10 +4,17 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.letschat.Contacts">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="contacts" />
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <android.support.v7.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/usersList">
+       </android.support.v7.widget.RecyclerView>
+
+
+   </RelativeLayout>
 
 </FrameLayout>

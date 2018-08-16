@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/default_pic"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/userProfilePic" />
+
+    <TextView
+        android:id="@+id/contactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/userProfilePic"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/userProfilePic"
+        android:text="UserName" />
+
+    <TextView
+        android:id="@+id/contactStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/contactName"
+        android:layout_below="@id/contactName"
+        android:layout_marginTop="10dp"
+        android:text="Everyone who wonder are not lost" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/userProfilePic"
+        android:layout_height="1dp"
+        android:layout_alignStart="@id/contactName"
+        android:background="@android:color/darker_gray"></View>
+
+</RelativeLayout>
